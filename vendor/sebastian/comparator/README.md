@@ -1,41 +1,35 @@
-# sebastian/comparator
+# Attendance System
 
-[![CI Status](https://github.com/sebastianbergmann/comparator/workflows/CI/badge.svg)](https://github.com/sebastianbergmann/comparator/actions)
-[![Type Coverage](https://shepherd.dev/github/sebastianbergmann/comparator/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/comparator)
+A web-based attendance management system built with Laravel and Blade templating. This system is designed to manage and track employee attendance efficiently, providing an intuitive interface for administrators and employees.
 
-This component provides the functionality to compare PHP values for equality.
+## Features
+
+- Employee login/logout
+- Daily attendance tracking
+- Admin dashboard with attendance reports
+- Leave management system
+- Role-based access (Admin, Employee)
+- Responsive UI built with Blade templates
+
+## Technologies Used
+
+- **Backend**: Laravel (PHP Framework)
+- **Frontend**: Blade templating engine, HTML, CSS, JavaScript
+- **Database**: MySQL
+- **Version Control**: Git, GitHub
 
 ## Installation
 
-You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):
+### Requirements
 
-```
-composer require sebastian/comparator
-```
+- PHP >= 8.0
+- Composer
+- MySQL
+- Node.js and npm (for front-end assets)
 
-If you only need this library during development, for instance to run your project's test suite, then you should add it as a development-time dependency:
+### Steps
 
-```
-composer require --dev sebastian/comparator
-```
-
-## Usage
-
-```php
-<?php
-use SebastianBergmann\Comparator\Factory;
-use SebastianBergmann\Comparator\ComparisonFailure;
-
-$date1 = new DateTime('2013-03-29 04:13:35', new DateTimeZone('America/New_York'));
-$date2 = new DateTime('2013-03-29 03:13:35', new DateTimeZone('America/Chicago'));
-
-$factory = new Factory;
-$comparator = $factory->getComparatorFor($date1, $date2);
-
-try {
-    $comparator->assertEquals($date1, $date2);
-    print "Dates match";
-} catch (ComparisonFailure $failure) {
-    print "Dates don't match";
-}
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/raufokz/attendance_system.git
+   cd attendance_system
